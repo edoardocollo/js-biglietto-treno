@@ -17,11 +17,15 @@ var prezzoSenzaSconto = kmDaPercorrere * prezzoKm;
 // CICLO IF SCONTO
 if (etaPasseggiero < 18){
   var prezzoMinorenni = prezzoSenzaSconto * 0.8;
-  document.getElementById('sconto_minorenni').innerHTML = "Ma essendo minorenne benefici di uno sconto del 20%. quindi il prezzo del tuo biglietto è di " + prezzoMinorenni + " euro"
+  var scontoMinorenni = document.getElementById('sconto_minorenni');
+  scontoMinorenni.style.display = "block";
+  scontoMinorenni.innerHTML = "Ma essendo minorenne benefici di uno sconto del 20%. quindi il prezzo del tuo biglietto è di " + prezzoMinorenni + " euro"
   console.log (prezzoMinorenni);
 } else if(etaPasseggiero > 65) {
   var prezzoOver = prezzoSenzaSconto * 0.6;
-  document.getElementById('sconto_over').innerHTML = "Ma essendo over 65 benefici di uno sconto del 20%. quindi il prezzo del tuo biglietto è di " + prezzoOver + " euro"
+  var scontoOver = document.getElementById('sconto_over');
+  scontoOver.style.display = "block";
+  scontoOver.innerHTML = "Ma essendo over 65 benefici di uno sconto del 20%. quindi il prezzo del tuo biglietto è di " + prezzoOver + " euro";
 
   console.log (prezzoOver);
 } else {
